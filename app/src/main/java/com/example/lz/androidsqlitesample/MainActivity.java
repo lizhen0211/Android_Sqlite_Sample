@@ -53,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
                 //String dbname = externalStorageDirectory.getPath() + "/testdir/stu";
                 //ExtendedSQLiteOpenHelper extendedSQLiteOpenHelper = new ExtendedSQLiteOpenHelper(v.getContext(), dbname, null, 1);
 
+                //File externalStorageDirectory = Environment.getExternalStorageDirectory();
+                //String dbname = externalStorageDirectory.getPath() + "/testdb/db1/db2";
+                //File file = new File(dbname);
+                //if(!file.exists()){
+                    //boolean mkdirs = file.mkdirs();
+                //}
+                //ExtendedSQLiteOpenHelper extendedSQLiteOpenHelper = new ExtendedSQLiteOpenHelper(v.getContext(), dbname+"/stu", null, 1);
+
                 ExtendedSQLiteOpenHelper extendedSQLiteOpenHelper = new ExtendedSQLiteOpenHelper(v.getContext(), "stu", null, 1);
                 SQLiteDatabase db = extendedSQLiteOpenHelper.getReadableDatabase();
             }
