@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -47,6 +48,11 @@ public class MainActivity extends AppCompatActivity {
         createDatabase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //数据库存储在SD卡
+                //File externalStorageDirectory = Environment.getExternalStorageDirectory();
+                //String dbname = externalStorageDirectory.getPath() + "/testdir/stu";
+                //ExtendedSQLiteOpenHelper extendedSQLiteOpenHelper = new ExtendedSQLiteOpenHelper(v.getContext(), dbname, null, 1);
+
                 ExtendedSQLiteOpenHelper extendedSQLiteOpenHelper = new ExtendedSQLiteOpenHelper(v.getContext(), "stu", null, 1);
                 SQLiteDatabase db = extendedSQLiteOpenHelper.getReadableDatabase();
             }
